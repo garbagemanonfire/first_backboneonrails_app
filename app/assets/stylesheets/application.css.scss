@@ -12,6 +12,8 @@
  *= require_tree .
  */
 
- @import "twitter/bootstrap";
+@import "twitter/bootstrap";
 
- @import "apps/footer";
+@import "apps/base";
+
+@import "apps/footer";
