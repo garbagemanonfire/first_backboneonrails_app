@@ -3,4 +3,12 @@
   List.Controller =
 
       listHeader: ->
-        console.log "This is the header"
+        links = App.request "header:entities"
+        console.log links
+
+        headerView = @getHeaderView links
+        App.headerRegion.show headerView
+
+      getHeaderView: (links) ->
+        new List.Headers
+          collection: links
